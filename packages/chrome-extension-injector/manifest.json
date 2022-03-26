@@ -1,0 +1,17 @@
+{
+  "name": "Seraph-Injector",
+  "description": "Inject Seraph SDK to current page",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["*://*/*"],
+      "js": ["inject.js"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["monitor.js"],
+    "matches": ["<all_urls>"]
+  }]
+}

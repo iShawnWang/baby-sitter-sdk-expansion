@@ -1,0 +1,11 @@
+{
+  "name": "seraph-sdk-expansion",
+  "version": "1.0.0",
+  "description": "expansions for seraph monitor SDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Seraph",
+  "license": "MIT"
+}
