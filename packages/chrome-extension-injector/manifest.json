@@ -1,6 +1,6 @@
 {
   "name": "Seraph-Injector",
-  "description": "Inject Seraph SDK to current page",
+  "description": "Inject Seraph JS SDK to current page, View report data in Console",
   "version": "1.0",
   "manifest_version": 3,
   "content_scripts": [
@@ -13,5 +13,11 @@
   "web_accessible_resources": [{
     "resources": ["monitor.js"],
     "matches": ["<all_urls>"]
-  }]
+  }],
+  "icons": {
+    "16": "/images/favicon.png",
+    "32": "/images/favicon.png",
+    "48": "/images/favicon.png",
+    "128": "/images/favicon.png"
+  }
 }
