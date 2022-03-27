@@ -1,7 +1,7 @@
 # source-map-parser
 
 
-https://source-map-parser.vercel.app/  
+https://seraph-sdk-expansion-sourcemap-parser.vercel.app/
 
 Parse original code info with sourcemap
 
