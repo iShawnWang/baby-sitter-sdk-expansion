@@ -6,7 +6,7 @@ export default defineConfig({
   },
   routes: [{ path: '/', component: '@/pages/index' }],
   fastRefresh: {},
-  esbuild: {},
+  esbuild: {target: 'es5'},
   devtool: 'source-map',
   targets: { ie: 11 },
 });
