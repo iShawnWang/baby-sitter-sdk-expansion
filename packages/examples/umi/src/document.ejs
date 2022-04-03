@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Your App</title>
+  <script crossorigin="anonymous" src="https://ossimage.ishawn.wang/monitor.1.0.3.js"></script>
+  <script>
+    // js初始化:
+    window._SERAPH_ = new MonitorJS({
+      siteId: "test", //站点ID，接入管理中申请的站点ID
+      source: "H5", //来源，默认H5
+      env: 'prd', //默认为prd。test-测试，pre-预发，prd-生产
+      jsError: true, //默认开启js 错误信息
+      promiseError: true, // 默认开启promise 错误信息
+      resourceError: true, // 默认开启 资源加载失败信息
+      ajaxError: true, // 默认开启ajax 等请求加载失败信息  但无法收集跨域信息错误 如收集跨域相关需开启ajaxCross:true
+      sdkEnv: 'test', // 默认为 prd, 为 'test' 时, 上报到 https://static-seraph-test.zhongan.io/sdk_web.json, 否则 上报到生产域名
+      offCollect: false, // 是否关闭采集，默认false
+      //beforeSend: function(event){ // SDK v1.0.3+ SDK 已默认内置此逻辑
+      //  if(event && event.category === 'Fetch' || event.category === 'Ajax'){
+      //    if(event.url && event.url.indexOf('KKJSBridge-RequestId') !== -1){
+      //      return false
+      //    }
+      //  }
+      //  return true
+      //},
+    });
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

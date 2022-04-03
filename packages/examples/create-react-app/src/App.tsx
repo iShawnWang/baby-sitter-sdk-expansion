@@ -1,5 +1,4 @@
 import { Button, Page, Code, Grid, Divider, Text } from "@geist-ui/core";
-import {useScript} from './useScript'
 
 interface SampleBlockProps {
   title: string;
@@ -24,33 +23,7 @@ const SampleBlock = ({ title, code, onProduce }: SampleBlockProps) => {
 };
 
 
-declare global {
-  interface Window {
-    _SERAPH_: any;
-  }
-}
-
-declare const MonitorJS: any
-
 const App = () => {
-  useScript('https://ossimage.ishawn.wang/monitor.1.0.3.js', () => {
-
-    window._SERAPH_ = new MonitorJS({
-      siteId: "23333", //站点ID，接入管理中申请的站点ID
-      source: "H5", //来源，默认H5
-      env: 'test', //默认为prd。test-测试，pre-预发，prd-生产
-      sdkEnv: 'test', // 默认为 prd, 为 'test' 时, 上报到 https://static-seraph-test.zhongan.io/sdk_web.json, 否则 上报到生产域名
-      extendsInfo: {
-        //扩展信息 可选
-        pageInfo: "sdk-expansion-cra",
-        getDynamic: () => {
-          return {
-            title: document.title
-          };
-        }
-      }
-    });
-  })
   return (
     <Page
       style={{
